@@ -1,0 +1,58 @@
+system_name: "Fingerprint Authentication — Legacy Deployment"
+system_description: >
+  Minutiae-based fingerprint authentication for legacy access control.
+  Partial compliance status — DPIA completed but several Art.32 gaps remain.
+  Represents a medium-risk partially compliant system.
+
+algorithm:
+  name: "Innovatrics AFIS"
+  modality: "fingerprint"
+  version: "3.8.1"
+  vendor: "Innovatrics s.r.o."
+
+deployment:
+  environment: "production"
+  use_case: "access_control"
+  data_subjects_count: 450
+  art9_basis: "9_2_b"
+  consent_mechanism: null
+  dpia_completed: true
+  dpia_date: "2025-06-10"
+  dpo_consulted: true
+  transfers_outside_uk_eea: false
+
+retention:
+  raw_images_retained: false
+  biometric_templates_retained: true
+  retention_period_days: 180        # Extended — in review
+  automated_deletion: false         # Manual process currently
+  deletion_audit_trail: true
+  data_minimisation_enforced: true
+  purpose_limitation_documented: true
+
+security:
+  encryption_at_rest: true
+  encryption_algorithm: "AES-128-CBC"  # Below recommended AES-256
+  tls_in_transit: true
+  template_protection: "none"        # GAP — no cancelable biometrics
+  anti_spoofing_pad: false           # GAP — no PAD
+  liveness_detection: false
+  liveness_detection_type: "none"
+  audit_logging: true
+  intrusion_detection: false
+  mfa_on_admin_access: false
+
+subject_rights:
+  erasure_process_documented: true
+  erasure_sla_days: 45               # GAP — exceeds 30-day limit
+  verified_deletion: false
+  portability_supported: false
+  automated_decision_logic_documented: false
+  subject_access_request_process: true
+
+transparency:
+  privacy_notice_published: true
+  biometric_collection_notice: true
+  lawful_basis_documented: true
+  purpose_limitation_documented: false
+  notice_last_updated: "2024-09-15"  # Stale — needs update

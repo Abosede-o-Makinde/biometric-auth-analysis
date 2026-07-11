@@ -1,0 +1,59 @@
+system_name: "IriShield Iris Recognition — Research Prototype"
+system_description: >
+  Daugman IrisCode-based recognition system under evaluation for border control use.
+  Not yet in production. DPIA not yet completed. Represents a high-risk non-compliant
+  research deployment. DO NOT deploy to production in current state.
+
+algorithm:
+  name: "IrisCode (Daugman 2009)"
+  modality: "iris"
+  version: "prototype-v0.3"
+  vendor: "Internal research team"
+
+deployment:
+  environment: "research"
+  use_case: "border_control"
+  data_subjects_count: 50           # Pilot study only
+  art9_basis: "9_2_g"              # Substantial public interest (border)
+  consent_mechanism: null
+  dpia_completed: false             # CRITICAL GAP — not yet completed
+  dpia_date: null
+  dpo_consulted: false              # DPO not yet involved
+  transfers_outside_uk_eea: null
+  adequacy_decision_or_sccs: null
+
+retention:
+  raw_images_retained: true         # HIGH GAP — iris images retained in research dataset
+  biometric_templates_retained: true
+  retention_period_days: 730        # 2 years — research retention
+  automated_deletion: false
+  deletion_audit_trail: false
+  data_minimisation_enforced: false
+  purpose_limitation_documented: false
+
+security:
+  encryption_at_rest: true
+  encryption_algorithm: "AES-256-GCM"
+  tls_in_transit: true
+  template_protection: "secure_sketch"
+  anti_spoofing_pad: false           # Research prototype — no PAD yet
+  liveness_detection: false
+  liveness_detection_type: "none"
+  audit_logging: true
+  intrusion_detection: false
+  mfa_on_admin_access: true
+
+subject_rights:
+  erasure_process_documented: false
+  erasure_sla_days: null
+  verified_deletion: false
+  portability_supported: false
+  automated_decision_logic_documented: false
+  subject_access_request_process: false
+
+transparency:
+  privacy_notice_published: false
+  biometric_collection_notice: true  # Participants have an information sheet
+  lawful_basis_documented: true
+  purpose_limitation_documented: true
+  notice_last_updated: null

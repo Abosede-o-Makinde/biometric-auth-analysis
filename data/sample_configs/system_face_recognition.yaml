@@ -1,0 +1,60 @@
+system_name: "CPS Face Recognition Access Control"
+system_description: >
+  ArcFace-based facial recognition deployed for staff access control at Scottish
+  Government Digital Directorate offices. Operates on 9_2_b employment law basis.
+
+algorithm:
+  name: "ArcFace R100"
+  modality: "face"
+  version: "2.1.0"
+  vendor: "InsightFace / open source"
+  sdk_version: "0.7.3"
+  trained_on: "MS1MV3 (synthetic augmentation only — no special category training data)"
+
+deployment:
+  environment: "production"
+  use_case: "access_control"
+  data_subjects_count: 1200
+  art9_basis: "9_2_b"             # Employment law basis
+  consent_mechanism: null
+  dpia_completed: true
+  dpia_date: "2026-01-20"
+  dpo_consulted: true
+  transfers_outside_uk_eea: false
+  adequacy_decision_or_sccs: null
+
+retention:
+  raw_images_retained: false
+  biometric_templates_retained: true
+  retention_period_days: 90         # Deleted 90 days after employment ends
+  automated_deletion: true
+  deletion_audit_trail: true
+  data_minimisation_enforced: true
+  purpose_limitation_documented: true
+
+security:
+  encryption_at_rest: true
+  encryption_algorithm: "AES-256-GCM"
+  tls_in_transit: true
+  template_protection: "cancelable"
+  anti_spoofing_pad: true
+  liveness_detection: true
+  liveness_detection_type: "active"
+  audit_logging: true
+  intrusion_detection: true
+  mfa_on_admin_access: true
+
+subject_rights:
+  erasure_process_documented: true
+  erasure_sla_days: 20
+  verified_deletion: true
+  portability_supported: false
+  automated_decision_logic_documented: true
+  subject_access_request_process: true
+
+transparency:
+  privacy_notice_published: true
+  biometric_collection_notice: true
+  lawful_basis_documented: true
+  purpose_limitation_documented: true
+  notice_last_updated: "2026-02-01"

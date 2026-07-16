@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this software in academic work, please cite it as below."
+type: software
+title: "biometric-auth-analysis: Biometric Authentication Security Evaluation with GDPR Article 9 Compliance Assessment"
+version: "1.0.0"
+date-released: "2026-07-20"
+authors:
+  - family-names: Makinde
+    given-names: Abosede
+    affiliation: "University of Sunderland"
+    orcid: ""
+abstract: >
+  A Python framework for rigorous biometric authentication system evaluation
+  combining FAR/FRR/EER analysis with 95% bootstrap confidence intervals,
+  demographic bias assessment (DPD/EOD/EqOdds/DIR per Hardt et al. 2016),
+  presentation attack simulation (7 vectors, ISO/IEC 30107-3), and GDPR
+  Article 9 compliance quantification (22 checks, 7 obligation clusters).
+  Grounded in MSc biometric authentication research (CETM44, University of
+  Sunderland). The first open-source tool to combine rigorous biometric
+  security evaluation with GDPR Art.9 compliance scoring.
+keywords:
+  - biometric-authentication
+  - gdpr-article-9
+  - fairness
+  - presentation-attack-detection
+  - far-frr-eer
+  - data-protection
+  - uk-gdpr
+  - demographic-bias
+  - equalised-odds
+  - delong-auc
+  - iso-19795
+license: MIT
+repository-code: "https://github.com/Abosede-o-Makinde/biometric-auth-analysis"
+references:
+  - type: article
+    title: "Comparing the areas under two or more correlated receiver operating characteristic curves: a nonparametric approach"
+    authors:
+      - family-names: DeLong
+        given-names: "Elizabeth R."
+      - family-names: DeLong
+        given-names: "David M."
+      - family-names: Clarke-Pearson
+        given-names: "Daniel L."
+    journal: Biometrics
+    volume: 44
+    issue: 3
+    year: 1988
+    pages: 837-845
+  - type: conference-paper
+    title: "Equality of Opportunity in Supervised Learning"
+    authors:
+      - family-names: Hardt
+        given-names: Moritz
+      - family-names: Price
+        given-names: Eric
+      - family-names: Srebro
+        given-names: Nathan
+    conference:
+      name: "Advances in Neural Information Processing Systems (NeurIPS)"
+    year: 2016
+  - type: report
+    title: "Face Recognition Vendor Technology (FRVT) — Presentation Attack Detection"
+    institution:
+      name: "National Institute of Standards and Technology (NIST)"
+    year: 2020
+    notes: "NISTIR 8339"
+  - type: standard
+    title: "Biometric performance testing and reporting — Part 1: Principles and framework"
+    institution:
+      name: "ISO/IEC"
+    number: "19795-1:2021"

@@ -1,0 +1,55 @@
+name: New Art.9 check
+description: Propose a new GDPR Article 9 compliance check
+title: "[Art.9 check]: "
+labels: ["gdpr", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All new checks must cite a specific UK GDPR provision and, where available, ICO guidance.
+        Metric-linked checks should state which computed metric drives the score.
+
+  - type: input
+    id: check-id
+    attributes:
+      label: Proposed check ID
+      placeholder: "A9-070"
+    validations:
+      required: true
+
+  - type: input
+    id: obligation
+    attributes:
+      label: Obligation cluster
+      placeholder: "OBL-5 — Art.32 Security Measures"
+    validations:
+      required: true
+
+  - type: textarea
+    id: provision
+    attributes:
+      label: GDPR provision
+      description: Quote or reference the specific article/paragraph.
+    validations:
+      required: true
+
+  - type: textarea
+    id: ico
+    attributes:
+      label: ICO or regulatory guidance
+      description: Link or citation supporting the check.
+
+  - type: textarea
+    id: scoring
+    attributes:
+      label: Scoring logic
+      description: How should this check be scored? Is it metric-linked?
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why is this check needed for biometric systems?
+    validations:
+      required: true

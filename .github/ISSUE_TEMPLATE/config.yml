@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/Abosede-o-Makinde/biometric-auth-analysis/blob/main/SECURITY.md
+    about: Report a security issue privately via SECURITY.md
